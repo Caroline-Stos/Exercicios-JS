@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let palavraSecreta = (prompt("***Jogo da Forca***" + "\n" + "Digite aqui a palavra secreta")).toUpperCase();
+        let tamanhoPalavra = palavraSecreta.length;
+        let letraChutada = "";
+        let tentativas;
+        let letraAcertada;
+        let letraErrada = "";
+
+        for (let i = 0; i <= tamanhoPalavra; i++) {
+            letraAcertada = ["_"];
+            tentativas = i;
+            maxTentativas = (i = 6);
+
+            while (tentativas < maxTentativas) {
+                letraChutada += prompt(
+                    "Palavra secreta: " + letraAcertada + "\n" + 
+                    "Tentativas: " + tentativas + "\n" + 
+                    "Letras já chutadas: " + letraChutada + "\n" + 
+                    "Letras erradas: " + letraErrada + "\n" + 
+                    "Digite aqui uma letra").toUpperCase();
+
+                if (letraChutada == palavraSecreta) {
+                    alert("você já informou essa letra anteriormente. Tente outra.");
+                }
+                
+                tentativas++;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
