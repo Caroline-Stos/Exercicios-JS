@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="web-estoque.css">
+
+    <!--fonte do titulo - Dongle - sans-serif-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+
     <title>Adicionando itens ao estoque</title>
 </head>
 
@@ -14,19 +20,26 @@
 
     <header>
         <div class="container">
+
             <div class="titulo">
                 <h1>CARRINHO DE COMPRAS</h1>
-                <P>Segue abaixo a sua lista de produtos:</P>
             </div>
 
             <div class="botao">
-                <button onclick="adicionarProduto()">Adicionar produto</button>
-                <button onclick="removerProduto()">Remover produto</button>
-                <button onclick="exibirLista()">Exibir lista</button>
-                <button onclick="limparEstoque()">Limpar estoque</button>
+                <button id="botao" onclick="adicionarProduto()">Adicionar produto</button>
+                <button id="botao" onclick="removerProduto()">Remover produto</button>
+                <button id="botao" onclick="exibirLista()">Exibir lista</button>
+                <button id="botao" onclick="limparEstoque()">Limpar estoque</button>
             </div>
 
+            <div>
+                <input type="text" id="input" style="display: none;">
+            </div>
+
+            <P>Segue abaixo a sua lista de produtos:</P>
+
             <div id="estoque"></div>
+
         </div>
     </header>
 
@@ -34,16 +47,17 @@
 
         let estoque = [];
 
+        botao.addEventListener('Click', function () {
+                    input.style.display = 'block';
+                });
+
         function adicionarProduto() {
 
-            while (true) {
-
-                let novoProduto = prompt("Digite aqui o produto a ser adicionado.");
-                estoque.push(novoProduto);
-                alert(`Produto "${novoProduto}" foi adicionado ao estoque.`);
-                break;
-            }
+                let input = document.getElementById("input").value;
+                estoque.push(input);
         }
+
+        alert(`Produto "${input}" foi adicionado ao estoque.`);
 
         function removerProduto() {
 
@@ -68,7 +82,7 @@
 
                 let listaProdutos = "";
                 estoque.forEach(function (produto) {
-                    listaProdutos += produto + "\n";
+                    listaProdutos += "\n" + produto;
                 });
 
                 document.getElementById("estoque").innerHTML = listaProdutos;

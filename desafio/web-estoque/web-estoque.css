@@ -17,20 +17,25 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    background-color: antiquewhite;
 }
 
 h1{
-    font-family: Arial, Helvetica, sans-serif;
-    color: #B22222;	
+    font-family: 'Dongle', sans-serif;
+    font-size: 50px;
+    color: #B22222;
+
 }
 
 p{
-    font-size: 20px;
+    font-family: 'Dongle', sans-serif;
+    font-size: 30px;
     color: black;
     font-weight:700;
 }
 
-.botao{
+#botao{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -46,6 +51,26 @@ button{
     align-items: center;
     background-color: #FF7F50;
     color: white;
+    font-family: 'Dongle', sans-serif;
     font-weight:700;
-    font-size: 18px;
+    font-size: 25px;
+}
+
+#input{
+    width: 250px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    background-color: #b4d9e2;
+}
+#estoque{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    border-radius: 15px;
+    background-color: antiquewhite;
 }
