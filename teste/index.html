@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--fontes-->
+    
+    <title>Teste - Carrinho de compras</title>
+</head>
+
+<header>
+    <h1 class="titulo">Meu carrinho</h1>
+</header>
+
+<body>
+
+    <h1>Clique abaixo para adicionar, remover, exibir ou limpar estoque</h1>
+
+    <div>
+        <button id="botao_a" onclick="adicionarProduto()">Adicionar produto</button>
+        <button id="botao_b" onclick="adicionarProduto()">Remover produto</button>
+        <button id="exibir" onclick="adicionarProduto()">Exibir</button>
+        <button id="limpar" onclick="adicionarProduto()">Limpar estoque</button>
+    </div>
+
+    <input type="text" id="input" style="display: none;">
+    <input type="submit" id="send">
+
+    <script>
+
+        let estoque = []
+
+        botao_a.addEventListener('click', function(){
+            
+            if(input.style.display === "none"){
+                input.style.display = 'block';
+            } else{
+                input.style.display = 'none';
+            }
+
+        });
+
+        botao_b.addEventListener('click', function(){
+            
+            if(input.style.display === "none"){
+                input.style.display = 'block';
+            } else{
+                input.style.display = 'none';
+            }
+
+        });
+
+        function adicionarProduto(){
+
+            let enviar = document.querySelector("#send");
+
+            enviar.addEventListener('Click', function(e) {
+
+                e.preventDefault();
+
+                const input = document.querySelector("#input");
+                const valor = input.value;
+                console.log(value);
+
+            });
+
+
+            
+            
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -35,7 +35,7 @@ p{
     font-weight:700;
 }
 
-#botao{
+.botao{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -73,4 +73,9 @@ button{
     display: flex;
     border-radius: 15px;
     background-color: antiquewhite;
+}
+
+
+.hide{
+    display: none;
 }

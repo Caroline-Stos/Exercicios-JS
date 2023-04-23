@@ -18,46 +18,39 @@
 
 <body>
 
-    <header>
-        <div class="container">
+    <div class="container">
 
-            <div class="titulo">
-                <h1>CARRINHO DE COMPRAS</h1>
-            </div>
-
-            <div class="botao">
-                <button id="botao" onclick="adicionarProduto()">Adicionar produto</button>
-                <button id="botao" onclick="removerProduto()">Remover produto</button>
-                <button id="botao" onclick="exibirLista()">Exibir lista</button>
-                <button id="botao" onclick="limparEstoque()">Limpar estoque</button>
-            </div>
-
-            <div>
-                <input type="text" id="input" style="display: none;">
-            </div>
-
-            <P>Segue abaixo a sua lista de produtos:</P>
-
-            <div id="estoque"></div>
-
+        <div class="titulo">
+            <h1>CARRINHO DE COMPRAS</h1>
         </div>
-    </header>
+
+        <div class="botao">
+            <button id="btn" onclick="adicionarProduto()">Adicionar produto</button>
+            <button id="btn" onclick="removerProduto()">Remover produto</button>
+            <button id="btn" onclick="exibirLista()">Exibir lista</button>
+            <button id="btn" onclick="limparEstoque()">Limpar estoque</button>
+        </div>
+
+        <div>
+            <input type="text" id="input" style="display: none;">
+        </div>
+
+        <P>Segue abaixo a sua lista de produtos:</P>
+
+        <div id="estoque"></div>
+
+    </div>
 
     <script>
 
         let estoque = [];
 
-        botao.addEventListener('Click', function () {
-                    input.style.display = 'block';
-                });
-
         function adicionarProduto() {
 
-                let input = document.getElementById("input").value;
-                estoque.push(input);
+            let novoProduto = prompt("Digite aqui o produto que deseja adicionar.");
+            estoque.push(novoProduto);
+            alert(`Produto "${novoProduto}" foi adicionado ao estoque.`);
         }
-
-        alert(`Produto "${input}" foi adicionado ao estoque.`);
 
         function removerProduto() {
 
@@ -82,7 +75,7 @@
 
                 let listaProdutos = "";
                 estoque.forEach(function (produto) {
-                    listaProdutos += "\n" + produto;
+                    listaProdutos += produto + "\n";
                 });
 
                 document.getElementById("estoque").innerHTML = listaProdutos;
