@@ -1,0 +1,71 @@
+
+/* container que envolve todas as divs */
+.container{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* Input do resultado */
+.resultado{
+    width: 300px;
+    height: 150px;
+    border: 2px solid black;
+    background-color: black;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 15px 0px 0px;
+}
+/*borda e tamanho do input do resultado */
+input{
+    padding: 20px;
+    border-radius: 15px;
+}
+/* botoes numericos da calculadora */
+.btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: blueviolet;
+    color: white;
+    font-weight: 800;
+    font-size: 25px;
+    margin: 5px;
+}
+/* background dos botoes */
+.btn_space {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+}
+/* color dos botoes de operação */
+#btn_op{
+    background-color: rgb(17, 202, 17);
+}
+#btn_clear{
+    background-color: black;
+}
+/*color do botao resultado */
+#result{
+    background-color: rgb(228, 20, 20);
+}
+.container_botoes {
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: aqua;
+    border-radius: 0px 0px 15px 15px;
+}
+
+
+
