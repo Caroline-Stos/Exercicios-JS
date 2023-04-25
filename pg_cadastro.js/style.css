@@ -33,16 +33,21 @@ h1{
     justify-content: center;
     flex-direction: column;
 }
-
-.tabela{
-    width: 500px;
+/* th(colunas do cabeçalho), aplicando cor e tam; */
+th{
+    width: 150px;
     height: 25px;
     background-color: black;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-around;
+}
+/* fonte negrito para cada linha do cabecalho */
+tr{
+    font-weight: 700;
+}
+.container_cabecalho{
+    width: 500px;
+    height: 30px;
+    background-color: black;
 }
 
 

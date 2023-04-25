@@ -4,7 +4,7 @@
 <head>
     <title>Formulário de Cadastro de Itens</title>
 </head>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/pg_cadastro.js/style.css">
 
 <body>
 
@@ -27,7 +27,7 @@
             <label for="preco">Preço:</label> <!-- Rótulo e campo de entrada de texto para o preço do item -->
 
 
-            <input type="text" id="preco" name="preco"><br><br>
+            <input type="text" id="preco" name="preco" placeholder="R$"><br><br>
             <!-- Define o tipo de entrada de dados como texto, atribuindo um ID e um nome -->
 
             <label for="quantidade">Quantidade:</label>
@@ -63,15 +63,15 @@
             <table id="tabela-estoque"> <!-- Início da tabela de estoque, atribuindo um ID -->
 
                 <thead> <!-- Início do cabeçalho da tabela -->
-
-                    <tr> <!-- Início de uma linha da tabela -->
-                        <th>Nome</th> <!-- Cabeçalho da coluna "Nome" -->
-                        <th>Preço</th> <!-- Cabeçalho da coluna "Preço" -->
-                        <th>Quantidade</th> <!-- Cabeçalho da coluna "Quantidade" -->
-                        <th>Data de Entrada</th> <!-- Cabeçalho da coluna "Data de Entrada" -->
-                        <th>Ações</th> <!-- Cabeçalho da coluna "Ações" -->
-                    </tr> <!-- Fim da linha da tabela -->
-
+                   
+                        <tr> <!-- Início de uma linha da tabela -->
+                            <th>Nome</th> <!-- Cabeçalho da coluna "Nome" -->
+                            <th>Preço</th> <!-- Cabeçalho da coluna "Preço" -->
+                            <th>Quantidade</th> <!-- Cabeçalho da coluna "Quantidade" -->
+                            <th>Data de Entrada</th> <!-- Cabeçalho da coluna "Data de Entrada" -->
+                            <th>Ações</th> <!-- Cabeçalho da coluna "Ações" -->
+                        </tr> <!-- Fim da linha da tabela -->
+                    
                 </thead> <!-- Fim do cabeçalho da tabela -->
 
                 <tbody> <!-- Início do corpo da tabela -->
@@ -82,7 +82,7 @@
 
     </div>
 
-    <script src="script.js"></script> <!-- Importa o script JS que controla a página -->
+    <script src="/pg_cadastro.js/script.js"></script> <!-- Importa o script JS que controla a página -->
 
 </body> <!-- Fim do corpo -->
 

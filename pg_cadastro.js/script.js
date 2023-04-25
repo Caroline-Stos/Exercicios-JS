@@ -37,6 +37,8 @@ btnVerEstoque.addEventListener("click", function() {
     //Verifica se o estoque está vazio;
 
     if(estoque.length === 0){
+        //o cod abaixo retorna a tabela em branco caso nao haja mais nada em estoque.
+        tabela.querySelector("tbody").innerHTML = "";
         alert("Não há produtos no estoque.");
         return;
     };
@@ -58,16 +60,17 @@ btnVerEstoque.addEventListener("click", function() {
         `;
         //Criou elementos novos (celulas) dentro do HTML com o createElement.
 
-        tr.querySelector("button").addEventListener("Click", function(){
+        tr.querySelector("button").addEventListener("click", function() {
             //Encontra o botao remover item.
         const index = estoque.indexOf(item);
         //Encontra o item/objeto;
         estoque.splice(index, 1);
         //Remove o conteudo do item;
-        tabela.removeChild(tr);
-        //Remove a linha do item;
-        });
+        
+        tabela.removeChild(tr);//Remove a linha do item;
 
+        });
+        //O querySelector() método retorna o primeiro elemento que corresponde a um seletor CSS.
         tabela.querySelector("tbody").appendChild(tr);
         //Adiciona uma linha a tabela;
     });
