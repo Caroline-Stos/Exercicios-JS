@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/desafio-estruturas/calculadora/style.css">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="resultado">
+            <input type="text" id="resultado">
+        </div>
+
+        <section class="container_botoes">
+
+            <div class="btn_space">
+                <button class="btn" onclick="adicionarNumero(7)">7</button>
+                <button class="btn" onclick="adicionarNumero(8)">8</button>
+                <button class="btn" onclick="adicionarNumero(9)">9</button>
+                <button class="btn" id="btn_clear" onclick="adicionarOperador('C')">C</button>
+            </div>
+
+            <div class="btn_space">
+                <button class="btn" onclick="adicionarNumero(4)">4</button>
+                <button class="btn" onclick="adicionarNumero(5)">5</button>
+                <button class="btn" onclick="adicionarNumero(6)">6</button>
+                <button class="btn" id="btn_op" onclick="adicionarOperador('*')">*</button>
+            </div>
+
+            <div class="btn_space">
+                <button class="btn" onclick="adicionarNumero(1)">1</button>
+                <button class="btn" onclick="adicionarNumero(2)">2</button>
+                <button class="btn" onclick="adicionarNumero(3)">3</button>
+                <button class="btn" id="btn_op" onclick="adicionarOperador('-')">-</button>
+            </div>
+
+            <div class="btn_space">
+                <button class="btn" id="btn_op" onclick="adicionarOperador('/')">/</button>
+                <button class="btn" onclick="adicionarNumero(0)">0</button>
+                <button class="btn" id="btn_op" onclick="adicionarOperador('+')">+</button>
+                <button class="btn" id="result" onclick="adicionarResultado('=')">=</button>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="/desafio-estruturas/calculadora/script.js"></script>
+
+</body>
+
+</html>

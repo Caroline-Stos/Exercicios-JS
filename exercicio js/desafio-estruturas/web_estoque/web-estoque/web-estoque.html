@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="web-estoque.css">
+
+    <!--fonte do titulo - Dongle - sans-serif-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+
+    <title>Adicionando itens ao estoque</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="titulo">
+            <h1>CARRINHO DE COMPRAS</h1>
+        </div>
+
+        <div class="botao">
+            <button id="btn" onclick="adicionarProduto()">Adicionar produto</button>
+            <button id="btn" onclick="removerProduto()">Remover produto</button>
+            <button id="btn" onclick="exibirLista()">Exibir lista</button>
+            <button id="btn" onclick="limparEstoque()">Limpar estoque</button>
+        </div>
+
+        <div>
+            <input type="text" id="input" style="display: none;">
+        </div>
+
+        <P>Segue abaixo a sua lista de produtos:</P>
+
+        <div id="estoque"></div>
+
+    </div>
+
+    <script>
+
+        let estoque = [];
+
+        function adicionarProduto() {
+
+            let novoProduto = prompt("Digite aqui o produto que deseja adicionar.");
+            estoque.push(novoProduto);
+            alert(`Produto "${novoProduto}" foi adicionado ao estoque.`);
+        }
+
+        function removerProduto() {
+
+            while (true) {
+
+                let removerProduto = prompt("Digite aqui o produto que deseja remover.");
+                let index = estoque.indexOf(removerProduto);
+
+                if (index !== -1) {
+                    estoque.splice(index, 1)
+                    alert(`O produto "${removerProduto} foi removido.`);
+                } else {
+                    alert("Este produto não existe no estoque. Tente novamente.");
+                }
+                break;
+            }
+        }
+
+        function exibirLista() {
+
+            while (true) {
+
+                let listaProdutos = "";
+                estoque.forEach(function (produto) {
+                    listaProdutos += produto + "\n";
+                });
+
+                document.getElementById("estoque").innerHTML = listaProdutos;
+                break;
+            }
+        }
+
+        function limparEstoque() {
+
+            while (true) {
+
+                estoque = [];
+                document.getElementById("estoque").innerHTML = estoque;
+                break;
+            }
+        }
+
+    </script>
+
+    </header>
+
+</body>
+
+</html>

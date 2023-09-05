@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<!--<script>
+//EX 1 - Crie um programa que imprima na tela a tabuada de multiplicação de um número digitado pelo usuário, utilizando um loop while; OK;
+
+let numeroAleatorio = parseInt(prompt("Digite um numero que deseja saber a tabuada"));
+let contador;
+let resultado;
+
+for (let contador = 1; contador <= 10; contador++) {
+    resultado = numeroAleatorio * contador;
+    alert("Tabuada do numero " + numeroAleatorio + "X" + contador + "=" + resultado);
+}
+
+</script>-->
+
+<!--<p id="nome1">João</p>
+<p id="idade1">25</p>
+
+<p id="nome2">Maria</p>
+<p id="idade2">14</p>
+
+<p id="nome3">Ana</p>
+<p id="idade3">19</p>
+
+<p id="nome4">Carla</p>
+<p id="idade4">45</p>
+
+<p id="nome5">Pedro</p>
+<p id="idade5">32</p>
+
+<script>
+//EX - 2 Faça um programa que leia o nome e a idade de 5 pessoas e imprima na tela o nome da pessoa mais velha.
+
+        for (let i = 1; i <= 5; i++) {
+            nome = prompt("Digite o nome" + " " + i);
+            idade = parseInt(prompt("Digite a idade" + " " + i));
+        }
+        alert("A pessoa mais velha é " + Math.max(nome));
+
+</script>-->
+
+<!--<script> 
+// EX 3 - imprimir numero impar ou par; OK;
+
+let numero = parseInt(prompt("Digite um numero acima 0 que deseja saber se é impar ou par"));
+
+if(numero <= 0){
+    alert("Erro, tente outro número acima de 0");
+} else{
+
+    let a = 0;
+
+while(numero > a){
+    
+    if(numero % 2 == 0) {
+        alert("Este número é par");
+        break;
+    } else {
+        alert("Este número é impar");
+        break;
+    }
+}
+     a++;
+}
+
+</script>-->
+
+<!--<script>
+//EX - 4 Programa que gere 10 numeros aleatorios entre 1 e 100 e imprima a media entre os 10 numeros; OK;
+
+        let soma = 0;
+
+        for (let i = 1; i <= 10; i++) {
+            let numeros = Math.floor(Math.random() * 100) + 1;
+            soma += numeros;
+            console.log("Número aleatório " + numeros);
+        }
+        
+        let media = soma / 10;
+        console.log("Média = " + media);
+
+</script>-->
+
+<script>
+
+    //EX 5 - Crie um programa que leia uma palavra digitada pelo usuário e verifique se ela é um palíndromo (ou seja, se é escrita da mesma forma tanto da esquerda para a direita quanto da direita para a esquerda), utilizando um loop do while.
+
+function isPalindromo(palavra) { // Função para verificar se a palavra é um palíndromo
+  // Remove espaços em branco e transforma todas as letras em minúsculas
+  palavra = palavra.replace(/\s/g, '').toLowerCase();
+  // Inicializa as variáveis para índices da esquerda e direita
+  let left = 0;
+  let right = palavra.length - 1;
+
+  // Loop while para verificar se é um palíndromo
+  while (left < right) {
+    if (palavra[left] !== palavra[right]) {
+      return false;  // Se as letras não forem iguais, não é um palíndromo
+    }
+    left++;
+    right--;
+  }
+
+  return true;  // Se o loop terminar, é um palíndromo
+}
+
+// Solicita a entrada do usuário
+const entrada = prompt("Digite uma palavra:");
+
+if (isPalindromo(entrada)) { // Chama a função e exibe o resultado
+  alert(`${entrada} é um palíndromo.`);
+} else {
+  alert(`${entrada} não é um palíndromo.`);
+}
+
+</script>
+
+</body>
+
+</html>

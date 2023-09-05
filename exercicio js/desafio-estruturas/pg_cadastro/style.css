@@ -1,0 +1,53 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.font_btn{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+}
+
+#btn-ver-estoque {
+    display: flex;
+    text-align: center;
+}
+
+.estoque{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/* th(colunas do cabeçalho), aplicando cor e tam; */
+th{
+    width: 150px;
+    height: 25px;
+    background-color: black;
+    color: white;
+}
+/* fonte negrito para cada linha do cabecalho */
+tr{
+    font-weight: 700;
+}
+.container_cabecalho{
+    width: 500px;
+    height: 30px;
+    background-color: black;
+}
+
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="carrinho.css">
+    <title>Desafio 3 - Carrinho</title>
+</head>
+
+<body>
+
+    <section class="container">
+
+        <div class="produtos_disp">
+            <!-- Lista de produtos -->
+            <h1>PRODUTOS DISPONÍVEIS</h1>
+            <ul class="lista_produtos">
+                <li>Shorts - Valor R$ 80,00</li>
+                <li>Tênis - Valor R$ 250,00</li>
+                <li>Camiseta - Valor R$ 50,00</li>
+            </ul>
+
+            <div class="imagem">
+                <img src="img/img-short.jpg" alt="">
+                <img src="img/img-tenis.jpg" alt="">
+                <img src="img/img-camiseta.webp" alt="">
+            </div>
+
+        </div>
+
+        <div class="carrinho">
+
+            <h2>CARRINHO</h2>
+
+            <!-- Menu suspenso - selecionar o produto -->
+            <label for="produto">Selecione o produto:</label>
+            <select class="select" name="produto" id="produto">
+                <option value="0">Shorts</option>
+                <option value="1">Tênis</option>
+                <option value="2">Camiseta</option>
+            </select>
+
+            <br><br>
+
+            <!-- Input da quantidade do produto -->
+            <label for="quantidade">Informe a quantidade:</label>
+            <input class="select" type="text" id="quantidade" name="quantidade">
+
+            <br><br>
+
+            <!-- botao de atualizar carrinho -->
+            <div>
+                <button class="botao" id="atualizar" onclick="atualizarCarrinho()">Adicionar ao carrinho</button>
+            </div>
+
+            <br><br>
+
+            <!-- lista de produtos -->
+            <ul id="carrinho">
+                <li>Shorts - 0</li>
+                <li>Tênis - 0</li>
+                <li>Camiseta - 0</li>
+            </ul>
+
+            <p>Valor total do carrinho é:<p id="valor-total">R$0,00</p></p>
+        </div>
+
+    </section>
+
+    <script>
+
+        const produtosDisponiveis = ['Shorts', 'Tênis', 'Camiseta'];//declarando produtos fixos disponíveis;
+        const precos = [80.00, 250.00, 50.00];//declarando valores fixos;
+        let quantidades = [0, 0, 0];//array vazia para armazenar as quantidades de cada produto;
+
+
+        function atualizarCarrinho(produto, quantidade) {//função para adicionar as quantidades dos produtos;
+
+            produto = produtosDisponiveis[document.getElementById("produto").value];
+            quantidade = parseFloat(document.getElementById("quantidade").value);
+
+            const index = produtosDisponiveis.indexOf(produto);//percorre cada indice da array produtosDisponiveis para encontrar o produto selecionado pelo usuário;
+
+            if (index !== -1) {
+                quantidades[index] += quantidade;//adiciona a quantidade no indice correspondente ao produto;
+                document.getElementById("quantidade").value = "";// zera o campo input;
+                alert(`Produto: ${produto} foi adicionado ao carrinho.`);
+            } else {
+                alert("Produto não encontrado.");
+            };
+
+            let carrinho = document.getElementById("carrinho").getElementsByTagName("li");
+
+            for (let i = 0; i < carrinho.length; i++) {//substitui o conteudo html pelo produto e quantidade atualizados;
+                carrinho[i].textContent = `${produtosDisponiveis[i]} - ${quantidades[i]}`;
+            };
+
+            function calcularValorTotal() {//calcula o valor total do carrinho;
+                let valorTotal = 0;
+                for (let i = 0; i < produtosDisponiveis.length; i++) {
+                    valorTotal += precos[i] * quantidades[i];
+                }
+                return valorTotal;
+            };
+
+            //atualiza o valor total dos produtos;
+            let total = calcularValorTotal();
+            document.getElementById("valor-total").textContent = `R$${total.toFixed(2)}`;
+        };
+
+    </script>
+
+</body>
+
+</html>

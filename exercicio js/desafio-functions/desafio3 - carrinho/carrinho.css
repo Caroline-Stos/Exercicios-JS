@@ -1,0 +1,100 @@
+body{
+    background-color:blueviolet;
+}
+/* retirando estilo da lista */
+li {
+    list-style-type: none;
+}
+/*lista de produtos centralizada à esquera, sob as  */
+.lista_produtos{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+/* fonte e alinhamento do texto da lista de produtos */
+.produtos_disp{
+    width: 70%;
+    height: 600px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    
+    border-radius: 15px;
+    color: white;
+    padding: 30px 0px 0px 0px;
+}
+/* lista de produtos em coluna do carrinho*/
+ul{
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+}
+/* container principal da pgn */
+.container{
+    width: 100%;
+    height: 650px;  
+    display: flex;
+}
+/* div do carrinho à direita, fundo branco */
+.carrinho{
+    width: 30%;
+    height: 600px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0px 0px 0px;
+}
+/* tamanho e cor do titulo */
+h1{
+    font-size: 25px;
+    margin-bottom: 30px;
+    color: rgb(226, 223, 33);
+    font-weight: 700;
+}
+/*tam do subtitulo */
+h2{
+    font-size: 20px;
+}
+/*tam do input e select */
+.select{
+    width:150px;
+    height: 30px;
+    display: flex;
+    align-self: center;
+    border-radius: 15px;
+}
+/* estilo do botao de adicionar */
+.botao{
+    width: 225px;
+    height: 40px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 15px;
+    background-color: black;
+    font-size: 18px;
+
+}
+/* tam das imagens */
+img{
+    width: 270px;
+    height: 300px;
+    border-radius: 15px;
+}
+/* estilo das img */
+.imagem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    
+}
+
+
+
+
+
+

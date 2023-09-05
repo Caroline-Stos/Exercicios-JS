@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1 - Baralho</title>
+</head>
+
+<body>
+    <div class="center">
+        <h1>Baralho</h1>
+        <button onclick="mostrarCarta()">Mostrar carta</button>
+        <br><br>
+        <div id="carta-aleatoria"></div>
+    </div>
+
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+
+    <script>
+        
+        function mostrarCarta() {
+
+            const naipes = ['paus', 'copas', 'ouros', 'espadas'];
+            const valores = ['Ás', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'valete', 'rainha', 'rei'];
+            const baralho = [];
+
+            for (const naipe of naipes) {
+                for (const valor of valores) {
+                    let cartas = [valor, naipe];
+                    baralho.push(cartas);
+                }
+            }
+
+            let cartaAleatoria = baralho[Math.floor(Math.random() * baralho.length)];
+            document.getElementById("carta-aleatoria").innerHTML = cartaAleatoria.join(' - ');
+        };
+
+    </script>
+
+</body>
+
+</html>
