@@ -1,2 +1,2 @@
 # Exercicios-JavaScript
-Exercícios para patricar js.
+Exercícios para praticar js.
